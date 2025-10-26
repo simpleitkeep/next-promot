@@ -17,21 +17,11 @@ export interface WPPost {
         id: number;
         source_url: string;
         alt_text: string;
-        media_details?: {
-          width: number;
-          height: number;
-        };
       }>;
       author?: Array<{
         id: number;
         name: string;
-        description: string;
       }>;
-      'wp:term'?: Array<Array<{
-        id: number;
-        name: string;
-        slug: string;
-      }>>;
     };
   }
   

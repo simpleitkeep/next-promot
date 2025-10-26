@@ -1,4 +1,4 @@
-import { WPPost, WPPage, WPCategory } from '@/types/wordpress';
+import { WPPost, WPPage, WPCategory } from '../types/wordpress';
 
 const API_URL = process.env.WORDPRESS_API_URL || '';
 

@@ -5,7 +5,7 @@ export const metadata = { title: "Promot", description: "Promot Technologies" };
 
 export default function RootLayout({children}) {
   return (
-    <html lang="en">
+    <html lang="en-US">
       <body>{children}</body>
     </html>
   );
