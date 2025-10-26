@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { WPPost } from '../types/wordpress';
+import { WPPost } from '../../types/wordpress';
 
 interface PostCardProps {
   post: WPPost;
