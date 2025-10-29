@@ -11,7 +11,7 @@ export default function Document() {
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
             j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-ML5PQTXS');`,
+            })(window,document,'script','dataLayer','GTM-TWJ8FGGJ');`,
           }}
         />
         
@@ -23,7 +23,7 @@ export default function Document() {
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', 'G-PM87DVVJKX');
+              gtag('config', 'G-9YMW2PMB1W');
             `,
           }}
         />
@@ -32,7 +32,7 @@ export default function Document() {
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-ML5PQTXS"
+            src="https://www.googletagmanager.com/ns.html?id=GTM-TWJ8FGGJ"
             height="0"
             width="0"
             style={{ display: 'none', visibility: 'hidden' }}
