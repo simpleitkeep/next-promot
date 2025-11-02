@@ -1,46 +1,40 @@
-export interface WPPost {
-    id: number;
-    date: string;
-    slug: string;
-    status: string;
-    title: {
-      rendered: string;
+export interface WordPressPage {
+  id: string;
+  title: string;
+  content: string;
+  slug: string;
+  date: string;
+  modified: string;
+  featuredImage?: {
+    node: {
+      sourceUrl: string;
+      altText: string;
     };
-    content: {
-      rendered: string;
+  };
+}
+
+export interface WordPressPost {
+  id: string;
+  title: string;
+  excerpt: string;
+  content: string;
+  slug: string;
+  date: string;
+  author: {
+    node: {
+      name: string;
     };
-    excerpt: {
-      rendered: string;
+  };
+  featuredImage?: {
+    node: {
+      sourceUrl: string;
+      altText: string;
     };
-    _embedded?: {
-      'wp:featuredmedia'?: Array<{
-        id: number;
-        source_url: string;
-        alt_text: string;
-      }>;
-      author?: Array<{
-        id: number;
-        name: string;
-      }>;
-    };
-  }
-  
-  export interface WPPage {
-    id: number;
-    date: string;
-    slug: string;
-    title: {
-      rendered: string;
-    };
-    content: {
-      rendered: string;
-    };
-  }
-  
-  export interface WPCategory {
-    id: number;
-    name: string;
-    slug: string;
-    description: string;
-    count: number;
-  }
+  };
+}
+
+export interface GeneralSettings {
+  title: string;
+  description: string;
+  url: string;
+}
