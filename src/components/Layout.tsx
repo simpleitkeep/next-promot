@@ -29,7 +29,7 @@ const Layout: React.FC<LayoutProps> = ({
             <div className="flex justify-between items-center h-16">
               <Link href="/" className="flex items-center space-x-3">
                 <Image 
-                  src="/PROMOT logo-Black and white.png" 
+                  src="/promot-logo.png" 
                   alt="Promot Logo" 
                   width={120} 
                   height={40}
