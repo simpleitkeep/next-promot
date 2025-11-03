@@ -1,58 +1,71 @@
 import React from 'react';
 import Layout from '@/components/Layout';
-import ContactForm from '../components/ContactForm';
-import { CheckCircle, Zap, TrendingUp, Globe, Shield, Clock } from 'lucide-react';
+import ContactForm from '@/components/ContactForm';
+import { CheckCircle, Zap, TrendingUp, Globe, Shield, Clock, ArrowRight, Code, Rocket, BarChart } from 'lucide-react';
 
 export default function Home() {
   return (
     <Layout>
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white py-24 sm:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-              Transform Your WordPress into Lightning-Fast, Omnichannel Storefronts
+      {/* Hero Section - Promot Style */}
+      <section className="relative bg-black text-white py-32 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-900 opacity-90"></div>
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
+          <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
+          <div className="absolute bottom-20 left-1/2 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
+        </div>
+        
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-4xl mx-auto">
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+              Transform Your WordPress into
+              <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mt-2">
+                Lightning-Fast Storefronts
+              </span>
             </h1>
-            <p className="text-xl sm:text-2xl text-gray-300 mb-8 leading-relaxed">
-              We decouple WordPress as a headless CMS and build SEO-optimized Next.js front ends. Fast pilots, clear ROI, measurable results in 2 weeks.
+            <p className="text-xl sm:text-2xl text-gray-300 mb-10 leading-relaxed">
+              Headless WordPress + Next.js. Fast pilots, clear ROI, measurable results in 2 weeks.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="#contact" 
-                className="inline-flex items-center justify-center bg-white text-gray-900 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                className="group inline-flex items-center justify-center bg-gradient-to-r from-blue-500 to-purple-600 text-white px-10 py-5 rounded-full font-semibold text-lg hover:from-blue-600 hover:to-purple-700 transition-all transform hover:scale-105 shadow-2xl"
               >
                 Start Your 2-Week Pilot
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </a>
               <a 
                 href="#process" 
-                className="inline-flex items-center justify-center border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors"
+                className="inline-flex items-center justify-center border-2 border-white text-white px-10 py-5 rounded-full font-semibold text-lg hover:bg-white hover:text-black transition-all"
               >
                 See How It Works
               </a>
             </div>
-            <div className="mt-12 grid grid-cols-3 gap-8 text-center">
-              <div>
-                <div className="text-3xl font-bold text-blue-400">2 Weeks</div>
-                <div className="text-sm text-gray-400 mt-1">Pilot Delivery</div>
+            
+            {/* Stats */}
+            <div className="mt-16 grid grid-cols-3 gap-8 max-w-3xl mx-auto">
+              <div className="text-center">
+                <div className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">2 Weeks</div>
+                <div className="text-sm sm:text-base text-gray-400 mt-2">Pilot Delivery</div>
               </div>
-              <div>
-                <div className="text-3xl font-bold text-green-400">3-5x</div>
-                <div className="text-sm text-gray-400 mt-1">Faster Load Times</div>
+              <div className="text-center">
+                <div className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-green-400 to-emerald-600 bg-clip-text text-transparent">3-5x</div>
+                <div className="text-sm sm:text-base text-gray-400 mt-2">Faster Loads</div>
               </div>
-              <div>
-                <div className="text-3xl font-bold text-purple-400">40%+</div>
-                <div className="text-sm text-gray-400 mt-1">Conversion Uplift</div>
+              <div className="text-center">
+                <div className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">40%+</div>
+                <div className="text-sm sm:text-base text-gray-400 mt-2">Conversion Lift</div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Problem Section */}
-      <section id="problem" className="py-20 bg-gray-50">
+      {/* Problem Section - Grid Style */}
+      <section id="problem" className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
               The Hidden Cost of Traditional WordPress
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -60,87 +73,67 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-200">
-              <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
-                <Clock className="w-6 h-6 text-red-600" />
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              {
+                icon: <Clock className="w-8 h-8" />,
+                title: "Poor Performance Kills Conversion",
+                desc: "High TTFB, slow Core Web Vitals, and unpredictable render times directly reduce conversion on landing and product pages.",
+                color: "from-red-500 to-orange-500"
+              },
+              {
+                icon: <Shield className="w-8 h-8" />,
+                title: "Coupled Workflow Compromises",
+                desc: "Marketing wants WordPress simplicity while engineering wants React performance. Classic WP forces everyone to compromise.",
+                color: "from-orange-500 to-yellow-500"
+              },
+              {
+                icon: <Globe className="w-8 h-8" />,
+                title: "Omnichannel is Nearly Impossible",
+                desc: "Delivering the same content across web, mobile app, kiosks, or PWA becomes extremely difficult and expensive.",
+                color: "from-blue-500 to-cyan-500"
+              },
+              {
+                icon: <TrendingUp className="w-8 h-8" />,
+                title: "SEO and Maintenance Debt",
+                desc: "Technical debt accumulates, making future features slow and increasingly expensive to implement.",
+                color: "from-purple-500 to-pink-500"
+              },
+              {
+                icon: <Zap className="w-8 h-8" />,
+                title: "Fear of Replatforming Risk",
+                desc: "Complete replatforming means time, cost, and vendor lock-in risks. You want incremental improvement.",
+                color: "from-yellow-500 to-green-500"
+              },
+              {
+                icon: <BarChart className="w-8 h-8" />,
+                title: "The Bottom Line",
+                desc: "Every second of delay costs revenue. A 1-second improvement can increase conversions by 7%.",
+                color: "from-green-500 to-emerald-500"
+              }
+            ].map((item, i) => (
+              <div key={i} className="group relative bg-white border-2 border-gray-100 rounded-2xl p-8 hover:border-transparent hover:shadow-2xl transition-all duration-300">
+                <div className={`absolute inset-0 bg-gradient-to-br ${item.color} opacity-0 group-hover:opacity-5 rounded-2xl transition-opacity`}></div>
+                <div className={`relative inline-flex items-center justify-center w-16 h-16 rounded-xl bg-gradient-to-br ${item.color} text-white mb-6 shadow-lg`}>
+                  {item.icon}
+                </div>
+                <h3 className="relative text-xl font-bold text-gray-900 mb-3">
+                  {item.title}
+                </h3>
+                <p className="relative text-gray-600 leading-relaxed">
+                  {item.desc}
+                </p>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Poor Performance Kills Conversion
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Traditional WordPress themes and plugin stacks produce high Time To First Byte, slow Core Web Vitals, and unpredictable render times. This directly reduces conversion on landing pages and product pages.
-              </p>
-            </div>
-
-            <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-200">
-              <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
-                <Shield className="w-6 h-6 text-orange-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Coupled Workflow Compromises
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Marketing teams want WordPress editing simplicity, while engineering teams want React for performance and modern UX. Classic WordPress forces everyone to compromise on their workflow.
-              </p>
-            </div>
-
-            <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-200">
-              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                <Globe className="w-6 h-6 text-blue-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Omnichannel is Nearly Impossible
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                When you need the same content on web, mobile app, kiosks, or PWA, coupled WordPress makes content reuse, caching, and consistent delivery extremely difficult and expensive.
-              </p>
-            </div>
-
-            <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-200">
-              <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-                <TrendingUp className="w-6 h-6 text-purple-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                SEO and Maintenance Debt
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Poorly configured WordPress or SPAs can lose search visibility. Technical debt accumulates, making future features slow and increasingly expensive to implement.
-              </p>
-            </div>
-
-            <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-200">
-              <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">
-                <Zap className="w-6 h-6 text-yellow-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Fear of Replatforming Risk
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Complete replatforming means time, cost, and vendor lock-in risks. You want incremental improvement with measurable ROI, not a risky all-or-nothing migration.
-              </p>
-            </div>
-
-            <div className="bg-gradient-to-br from-gray-900 to-gray-800 p-8 rounded-xl shadow-sm text-white">
-              <h3 className="text-xl font-bold mb-3">
-                The Bottom Line
-              </h3>
-              <p className="text-gray-300 leading-relaxed mb-4">
-                Every second of delay costs you revenue. A 1-second improvement in load time can increase conversions by 7%.
-              </p>
-              <p className="text-2xl font-bold text-green-400">
-                Can you afford to wait?
-              </p>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Solution Section */}
-      <section id="solution" className="py-20 bg-white">
+      {/* Solution Section - Two Column */}
+      <section id="solution" className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
               The Headless WordPress Solution
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -148,109 +141,82 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                How It Works
-              </h3>
+          <div className="grid lg:grid-cols-2 gap-12 items-start mb-20">
+            {/* How It Works */}
+            <div className="bg-white rounded-2xl p-10 shadow-xl">
+              <h3 className="text-3xl font-bold text-gray-900 mb-8">How It Works</h3>
               <div className="space-y-6">
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold mr-4">
-                    1
+                {[
+                  { num: "1", title: "Keep WordPress as Your CMS", desc: "Content team continues using the familiar WordPress editor. No retraining needed." },
+                  { num: "2", title: "Expose Content via GraphQL API", desc: "Configure WordPress to serve content through a modern, flexible API." },
+                  { num: "3", title: "Build Lightning-Fast Next.js Frontend", desc: "Create a modern, SEO-optimized React frontend with SSR and edge caching." },
+                  { num: "4", title: "Deploy to Global CDN", desc: "Your site runs on Vercel's edge network, delivering content from the closest location." }
+                ].map((step, i) => (
+                  <div key={i} className="flex items-start group">
+                    <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 text-white rounded-xl flex items-center justify-center font-bold text-lg mr-5 group-hover:scale-110 transition-transform shadow-lg">
+                      {step.num}
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-gray-900 mb-2 text-lg">{step.title}</h4>
+                      <p className="text-gray-600">{step.desc}</p>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-2">Keep WordPress as Your CMS</h4>
-                    <p className="text-gray-600">Your content team continues using the familiar WordPress editor. No retraining needed.</p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold mr-4">
-                    2
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-2">Expose Content via GraphQL API</h4>
-                    <p className="text-gray-600">We configure WordPress to serve content through a modern, flexible API that can feed any channel.</p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold mr-4">
-                    3
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-2">Build Lightning-Fast Next.js Frontend</h4>
-                    <p className="text-gray-600">We create a modern, SEO-optimized React frontend with server-side rendering, static generation, and edge caching.</p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold mr-4">
-                    4
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-2">Deploy to Global CDN</h4>
-                    <p className="text-gray-600">Your site runs on Vercel edge network, delivering content from the closest location to each visitor.</p>
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-2xl">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                What You Get
-              </h3>
+            {/* What You Get */}
+            <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-10 shadow-xl">
+              <h3 className="text-3xl font-bold text-gray-900 mb-8">What You Get</h3>
               <ul className="space-y-4">
                 {[
                   'WordPress CMS retained with familiar editing',
-                  'Next.js frontend with SSR/SSG for performance',
-                  'GraphQL API for flexible content delivery',
+                  'Next.js frontend with SSR/SSG',
+                  'GraphQL API for flexible delivery',
                   'Optimized images and assets on CDN',
-                  'Perfect Lighthouse scores (90+ across all metrics)',
+                  'Perfect Lighthouse scores (90+)',
                   'SEO-optimized with server rendering',
                   'Mobile-first responsive design',
-                  'Analytics and conversion tracking setup',
-                  'Cache invalidation and deployment automation',
-                  '30-day monitoring and support package'
-                ].map((item, index) => (
-                  <li key={index} className="flex items-start">
+                  'Analytics and conversion tracking',
+                  'Cache invalidation automation',
+                  '30-day monitoring and support'
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start">
                     <CheckCircle className="w-6 h-6 text-green-600 mr-3 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">{item}</span>
+                    <span className="text-gray-700 font-medium">{item}</span>
                   </li>
                 ))}
               </ul>
             </div>
           </div>
 
-          {/* Why Choose Us */}
-          <div className="bg-gray-900 text-white rounded-2xl p-8 sm:p-12">
-            <h3 className="text-2xl sm:text-3xl font-bold mb-8 text-center">
-              Why Choose Promot
-            </h3>
+          {/* Why Choose Us - Cards */}
+          <div className="bg-gradient-to-br from-gray-900 to-black text-white rounded-3xl p-12 shadow-2xl">
+            <h3 className="text-3xl sm:text-4xl font-bold mb-12 text-center">Why Choose Promot</h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div>
-                <div className="text-3xl font-bold text-blue-400 mb-2">Cost-Efficient</div>
-                <p className="text-gray-300">For the same budget a UK firm spends on discovery, we deliver a measurable pilot plus roadmap.</p>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-green-400 mb-2">One Vendor</div>
-                <p className="text-gray-300">CMS modeling, frontend engineering, SEO, and analytics in one package. Fewer handoffs, faster outcomes.</p>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-purple-400 mb-2">D2C Focus</div>
-                <p className="text-gray-300">We understand cart optimization, checkout UX, and LTV metrics—not just generic builds.</p>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-yellow-400 mb-2">Clear SLAs</div>
-                <p className="text-gray-300">English fluency, UK time overlap, packaged sprints, and proof-of-value guarantees reduce risk.</p>
-              </div>
+              {[
+                { title: "Cost-Efficient", desc: "For the same budget a UK firm spends on discovery, we deliver a measurable pilot plus roadmap.", gradient: "from-blue-400 to-blue-600" },
+                { title: "One Vendor", desc: "CMS modeling, frontend engineering, SEO, and analytics in one package.", gradient: "from-green-400 to-green-600" },
+                { title: "D2C Focus", desc: "We understand cart optimization, checkout UX, and LTV metrics—not just generic builds.", gradient: "from-purple-400 to-purple-600" },
+                { title: "Clear SLAs", desc: "English fluency, UK time overlap, packaged sprints, and proof-of-value guarantees.", gradient: "from-yellow-400 to-yellow-600" }
+              ].map((item, i) => (
+                <div key={i} className="text-center">
+                  <div className={`text-4xl font-bold bg-gradient-to-r ${item.gradient} bg-clip-text text-transparent mb-3`}>
+                    {item.title}
+                  </div>
+                  <p className="text-gray-300">{item.desc}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* Process Section */}
-      <section id="process" className="py-20 bg-gray-50">
+      {/* Process Section - Timeline Style */}
+      <section id="process" className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
               Your 2-Week Pilot: Day by Day
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -258,127 +224,103 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="space-y-8">
-            <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-8">
-              <div className="flex items-start">
-                <div className="flex-shrink-0 w-16 h-16 bg-blue-600 text-white rounded-lg flex items-center justify-center font-bold text-xl mr-6">
-                  D0-2
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3">Discovery Phase</h3>
-                  <p className="text-gray-600 mb-4">We identify your business KPIs, analyze your top-performing pages and conversion points, establish baseline metrics including TTFB, LCP, CLS, and FCP, and map your content structure.</p>
-                  <div className="bg-blue-50 rounded-lg p-4">
-                    <p className="text-sm font-semibold text-blue-900">Deliverable: Performance baseline report and content architecture document</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div className="relative space-y-8">
+            {/* Timeline Line */}
+            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500 hidden lg:block"></div>
 
-            <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-8">
-              <div className="flex items-start">
-                <div className="flex-shrink-0 w-16 h-16 bg-green-600 text-white rounded-lg flex items-center justify-center font-bold text-xl mr-6">
-                  D3-10
+            {[
+              { day: "D0-2", title: "Discovery Phase", color: "blue", desc: "Identify business KPIs, analyze top pages, establish baseline metrics (TTFB, LCP, CLS, FCP), and map content structure.", deliverable: "Performance baseline report and content architecture document" },
+              { day: "D3-10", title: "Pilot Build", color: "green", desc: "Configure WordPress GraphQL API, implement Next.js frontend with SSR/SSG, connect assets to CDN with optimization, set up caching.", deliverable: "Working headless site on staging environment" },
+              { day: "D11-12", title: "Testing and SEO", color: "purple", desc: "Validate server rendering, configure metadata and canonicalization, implement XML sitemap and schema markup, ensure accessibility.", deliverable: "SEO audit report and Lighthouse performance scores" },
+              { day: "D13-14", title: "Launch and Measurement", color: "orange", desc: "Deploy to production, run Core Web Vitals measurements, set up analytics dashboards, configure A/B testing for CTAs.", deliverable: "Live production site with analytics dashboard" },
+              { day: "D15+", title: "Handover and Operations", color: "pink", desc: "Complete operational runbook covering cache invalidation and deployment. 30-day monitoring retainer with ongoing support.", deliverable: "Documentation package and ongoing support agreement" }
+            ].map((phase, i) => (
+              <div key={i} className="relative bg-white border-2 border-gray-100 rounded-2xl p-8 hover:border-transparent hover:shadow-2xl transition-all lg:ml-20">
+                <div className={`absolute -left-20 top-8 w-16 h-16 bg-gradient-to-br from-${phase.color}-500 to-${phase.color}-700 text-white rounded-xl flex items-center justify-center font-bold text-lg shadow-xl hidden lg:flex`}>
+                  {phase.day}
                 </div>
-                <div className="flex-1">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3">Pilot Build</h3>
-                  <p className="text-gray-600 mb-4">Configure WordPress GraphQL API with custom post types and fields. Implement Next.js frontend with server-side rendering and static generation for critical pages. Connect assets to CDN with image optimization. Set up caching strategies.</p>
-                  <div className="bg-green-50 rounded-lg p-4">
-                    <p className="text-sm font-semibold text-green-900">Deliverable: Working headless site on staging environment</p>
-                  </div>
+                <div className="lg:hidden mb-4">
+                  <span className={`inline-block px-4 py-2 bg-gradient-to-r from-${phase.color}-500 to-${phase.color}-700 text-white rounded-lg font-bold`}>
+                    {phase.day}
+                  </span>
                 </div>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-8">
-              <div className="flex items-start">
-                <div className="flex-shrink-0 w-16 h-16 bg-purple-600 text-white rounded-lg flex items-center justify-center font-bold text-xl mr-6">
-                  D11-12
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3">Testing and SEO</h3>
-                  <p className="text-gray-600 mb-4">Validate server-side rendering, configure metadata and canonicalization, implement XML sitemap and schema markup, test with Googlebot simulation tools, ensure accessibility compliance.</p>
-                  <div className="bg-purple-50 rounded-lg p-4">
-                    <p className="text-sm font-semibold text-purple-900">Deliverable: SEO audit report and Lighthouse performance scores</p>
-                  </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">{phase.title}</h3>
+                <p className="text-gray-600 mb-4 leading-relaxed">{phase.desc}</p>
+                <div className={`bg-${phase.color}-50 rounded-lg p-4 border-l-4 border-${phase.color}-500`}>
+                  <p className="text-sm font-semibold text-gray-800">
+                    <span className="text-xs uppercase tracking-wide text-gray-500">Deliverable:</span><br/>
+                    {phase.deliverable}
+                  </p>
                 </div>
               </div>
-            </div>
-
-            <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-8">
-              <div className="flex items-start">
-                <div className="flex-shrink-0 w-16 h-16 bg-orange-600 text-white rounded-lg flex items-center justify-center font-bold text-xl mr-6">
-                  D13-14
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3">Launch and Measurement</h3>
-                  <p className="text-gray-600 mb-4">Deploy from staging to production, run Core Web Vitals measurements, set up analytics dashboards with conversion tracking, configure A/B testing for critical CTAs where applicable.</p>
-                  <div className="bg-orange-50 rounded-lg p-4">
-                    <p className="text-sm font-semibold text-orange-900">Deliverable: Live production site with analytics dashboard and performance comparison report</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-gradient-to-r from-gray-900 to-gray-800 rounded-xl shadow-sm p-8 text-white">
-              <div className="flex items-start">
-                <div className="flex-shrink-0 w-16 h-16 bg-white text-gray-900 rounded-lg flex items-center justify-center font-bold text-xl mr-6">
-                  D15+
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-2xl font-bold mb-3">Handover and Operations</h3>
-                  <p className="text-gray-300 mb-4">Complete operational runbook covering cache invalidation and deployment procedures. 30-day monitoring retainer with ongoing support and optimization recommendations.</p>
-                  <div className="bg-white/10 rounded-lg p-4">
-                    <p className="text-sm font-semibold">Deliverable: Documentation package and ongoing support agreement</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
 
-          {/* Metrics We Track */}
-          <div className="mt-16 bg-white rounded-2xl p-8 sm:p-12 border-2 border-gray-200">
-            <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
-              How We Measure Success
-            </h3>
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Zap className="w-8 h-8 text-blue-600" />
+          {/* Metrics Section */}
+          <div className="mt-20 bg-gradient-to-br from-gray-50 to-gray-100 rounded-3xl p-12 border-2 border-gray-200">
+            <h3 className="text-3xl font-bold text-gray-900 mb-10 text-center">How We Measure Success</h3>
+            <div className="grid md:grid-cols-3 gap-10">
+              {[
+                { icon: <Zap className="w-10 h-10" />, title: "Performance Metrics", desc: "Pre/post Core Web Vitals (LCP, INP, CLS), TTFB, Largest Contentful Paint", color: "blue" },
+                { icon: <TrendingUp className="w-10 h-10" />, title: "Conversion Impact", desc: "Conversion rate per critical page, revenue per visitor uplift, A/B test results", color: "green" },
+                { icon: <Globe className="w-10 h-10" />, title: "SEO Performance", desc: "Indexation checks, organic traffic tracking over 30/90 days, search ranking improvements", color: "purple" }
+              ].map((metric, i) => (
+                <div key={i} className="text-center group">
+                  <div className={`w-20 h-20 bg-gradient-to-br from-${metric.color}-100 to-${metric.color}-200 rounded-2xl flex items-center justify-center mx-auto mb-5 group-hover:scale-110 transition-transform`}>
+                    <div className={`text-${metric.color}-600`}>{metric.icon}</div>
+                  </div>
+                  <h4 className="font-bold text-gray-900 mb-3 text-xl">{metric.title}</h4>
+                  <p className="text-gray-600 leading-relaxed">{metric.desc}</p>
                 </div>
-                <h4 className="font-bold text-gray-900 mb-2">Performance Metrics</h4>
-                <p className="text-gray-600 text-sm">Pre/post Core Web Vitals (LCP, INP, CLS), TTFB, and Largest Contentful Paint measurements</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <TrendingUp className="w-8 h-8 text-green-600" />
-                </div>
-                <h4 className="font-bold text-gray-900 mb-2">Conversion Impact</h4>
-                <p className="text-gray-600 text-sm">Conversion rate per critical page, revenue per visitor uplift, and A/B test results</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Globe className="w-8 h-8 text-purple-600" />
-                </div>
-                <h4 className="font-bold text-gray-900 mb-2">SEO Performance</h4>
-                <p className="text-gray-600 text-sm">Indexation checks, organic traffic tracking over 30/90 days, and search ranking improvements</p>
-              </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section id="contact" className="py-20 bg-gradient-to-br from-blue-600 to-purple-600 text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
-            Ready to Transform Your WordPress Site?
-          </h2>
-          <p className="text-xl sm:text-2xl mb-8 text-blue-100">
-            Start with a 2-week pilot. Measurable results. Clear ROI. Zero risk.
-          </p>
-          <div className="bg-white rounded-2xl p-8 sm:p-12 text-left">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">Get Your Free Consultation</h3>
+      {/* CTA Section - Promot Style */}
+      <section id="contact" className="py-24 bg-gradient-to-br from-black via-gray-900 to-black text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMyMjIiIGZpbGwtb3BhY2l0eT0iMC4xIj48cGF0aCBkPSJNMzYgMzRjMC0yLjIxLTEuNzktNC00LTRzLTQgMS43OS00IDQgMS43OSA0IDQgNCA0LTEuNzkgNC00em0wLTZjMC0yLjIxLTEuNzktNC00LTRzLTQgMS43OS00IDQgMS43OSA0IDQgNCA0LTEuNzkgNC00em0wIDBjMC0yLjIxLTEuNzktNC00LTRzLTQgMS43OS00IDQgMS43OSA0IDQgNCA0LTEuNzkgNC00eiIvPjwvZz48L2c+PC9zdmc+')] opacity-30"></div>
+        
+        <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
+              Ready to Transform Your WordPress Site?
+            </h2>
+            <p className="text-xl sm:text-2xl text-gray-300 mb-4">
+              Start with a 2-week pilot. Measurable results. Clear ROI. Zero risk.
+            </p>
+          </div>
+          
+          <div className="bg-white rounded-3xl p-8 sm:p-12 shadow-2xl">
+            <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">Get Your Free Consultation</h3>
             <ContactForm />
+          </div>
+
+          <div className="mt-12 text-center text-gray-400">
+            <p className="text-sm">
+              🔒 Your information is secure and will never be shared. We'll respond within 24 hours.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Trust Indicators */}
+      <section className="py-16 bg-white border-t border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-3 gap-8 text-center">
+            <div>
+              <div className="text-4xl font-bold text-gray-900 mb-2">100+</div>
+              <div className="text-gray-600">Projects Delivered</div>
+            </div>
+            <div>
+              <div className="text-4xl font-bold text-gray-900 mb-2">50+</div>
+              <div className="text-gray-600">Happy Clients</div>
+            </div>
+            <div>
+              <div className="text-4xl font-bold text-gray-900 mb-2">5★</div>
+              <div className="text-gray-600">Average Rating</div>
+            </div>
           </div>
         </div>
       </section>
