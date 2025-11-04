@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { WPPost } from '../../types/wordpress';
+import { WordPressPost } from '../types/wordpress';
 
 interface PostCardProps {
-  post: WPPost;
+  post: WordPressPost;
 }
 
 export default function PostCard({ post }: PostCardProps) {

@@ -15,16 +15,25 @@ export interface WordPressPage {
 
 export interface WordPressPost {
   id: string;
-  title: string;
-  excerpt: string;
+  title: {
+    rendered:string;
+  };
+  excerpt: {
+    rendered:string;
+  };
+  _embedded?: {
+    'wp:featuredmedia'?: Array<{
+      source_url: string;
+      alt_text: string;
+    }>;
+    author?: Array<{
+      name: string;
+    }>;
+  };
   content: string;
   slug: string;
   date: string;
-  author: {
-    node: {
-      name: string;
-    };
-  };
+
   featuredImage?: {
     node: {
       sourceUrl: string;
