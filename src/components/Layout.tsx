@@ -12,8 +12,8 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ 
   children, 
-  title = 'Promot - Headless WordPress Solutions',
-  description = 'Lightning-fast, omnichannel WordPress storefronts with Next.js'
+  title = 'Promot - Headless-C.M.S. Solutions',
+  description = 'Lightning-fast, omnichannel WordPress (C.M.S.) websites/storefronts with Next.js'
 }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -36,8 +36,8 @@ const Layout: React.FC<LayoutProps> = ({
                 <Image 
                   src="/promot-logo.png" 
                   alt="Promot Logo" 
-                  width={180} 
-                  height={60}
+                  width={360} 
+                  height={120}
                   className="h-14 w-auto transition-transform group-hover:scale-105"
                   priority
                 />
@@ -129,10 +129,10 @@ const Layout: React.FC<LayoutProps> = ({
                   alt="Promot Logo" 
                   width={160} 
                   height={53}
-                  className="h-12 w-auto mb-6 brightness-0 invert"
+                  className="h-12 w-auto mb-6"
                 />
                 <p className="text-gray-400 leading-relaxed mb-6">
-                  Transforming businesses through headless WordPress solutions. Fast, reliable, and built for growth.
+                  Transforming businesses through headless WordPress/C.M.S. solutions. Fast, reliable, and built for growth.
                 </p>
                 <div className="flex space-x-4">
                   <a href="https://linktr.ee/Promot" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors">
