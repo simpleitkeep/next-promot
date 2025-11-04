@@ -33,13 +33,13 @@ const Layout: React.FC<LayoutProps> = ({
             <div className="flex justify-between items-center h-20">
               {/* Logo */}
               <Link href="/" className="flex items-center space-x-3 group">
-                <Image 
-                  src="/promot-logo.png" 
-                  alt="Promot Logo" 
-                  width={360} 
-                  height={120}
-                  className="h-14 w-auto transition-transform group-hover:scale-105"
-                  priority
+              <Image 
+                 src="/promot-logo.png" 
+                 alt="Promot Logo" 
+                 width={240} 
+                 height={80}
+                 className="h-16 sm:h-20 w-auto transition-transform group-hover:scale-105"
+                 priority
                 />
               </Link>
 
@@ -127,9 +127,9 @@ const Layout: React.FC<LayoutProps> = ({
                 <Image 
                   src="/promot-logo.png" 
                   alt="Promot Logo" 
-                  width={160} 
-                  height={53}
-                  className="h-12 w-auto mb-6"
+                  width={240} 
+                  height={80}
+                  className="h-16 w-auto mb-6"
                 />
                 <p className="text-gray-400 leading-relaxed mb-6">
                   Transforming businesses through headless WordPress/C.M.S. solutions. Fast, reliable, and built for growth.
