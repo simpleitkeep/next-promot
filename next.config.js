@@ -2,8 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['promot.skagtech.com', 'promot.co.in'],
-    remotePatterns: [
+      remotePatterns: [
       {
         protocol: 'https',
         hostname: 'promot.skagtech.com',
