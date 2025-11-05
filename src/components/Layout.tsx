@@ -45,6 +45,9 @@ const Layout: React.FC<LayoutProps> = ({
 
               {/* Desktop Navigation */}
               <div className="hidden md:flex items-center space-x-8">
+                <Link href="/tech-vision" className="text-gray-700 hover:text-black font-medium transition-colors">
+                  Tech Vision
+                </Link>
                 <Link href="#problem" className="text-gray-700 hover:text-black font-medium transition-colors">
                   The Problem
                 </Link>
@@ -79,6 +82,13 @@ const Layout: React.FC<LayoutProps> = ({
             {mobileMenuOpen && (
               <div className="md:hidden py-4 border-t border-gray-200 animate-fade-in">
                 <div className="flex flex-col space-y-4">
+                  <Link
+                    href="/tech-vision" 
+                    className="text-gray-700 hover:text-black font-medium py-2 transition-colors"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Our Tech Vision
+                    </Link> 
                   <Link 
                     href="#problem" 
                     className="text-gray-700 hover:text-black font-medium py-2 transition-colors"
